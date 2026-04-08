@@ -30,13 +30,15 @@ app.get("/api/health", (req, res) => {
 
 if (process.env.NODE_ENV === "production") {
   const distPath = path.join(rootDir, "client", "dist");
-  app.use(express.static(distPath));
-  app.get("*", (req, res, next) => {
-    if (req.path.startsWith("/api")) {
-      return next();
-    }
-    res.sendFile(path.join(distPath, "index.html"));
-  });
+  if (require("fs").existsSync(distPath)) {
+    app.use(express.static(distPath));
+    app.get("*", (req, res, next) => {
+      if (req.path.startsWith("/api")) {
+        return next();
+      }
+      res.sendFile(path.join(distPath, "index.html"));
+    });
+  }
 }
 
 async function start() {
