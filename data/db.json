@@ -1,0 +1,43 @@
+{
+  "users": [
+    {
+      "id": "c57547f0-64cb-490d-ba40-af38f5683ff9",
+      "email": "solanagranobles39@gmail.com",
+      "passwordHash": "$2a$10$eUPbWJvvGZ113mlPEEZfLe/J/8QoBVaAO.U/1S4.94cR8MMbNckQC"
+    }
+  ],
+  "products": [
+    {
+      "id": "521e56c2-32bc-4aac-9f4f-ee6b1e29e34e",
+      "title": "Ejemplo Producto",
+      "image": "pla1.png",
+      "detailPath": "/obra/521e56c2-32bc-4aac-9f4f-ee6b1e29e34e"
+    },
+    {
+      "id": "9c652c4c-ed3c-4835-974b-06f2ebe8c606",
+      "title": "Ejemplo Producto",
+      "image": "pla2.png",
+      "detailPath": "/obra/9c652c4c-ed3c-4835-974b-06f2ebe8c606"
+    },
+    {
+      "id": "003968e3-e31c-4210-927f-d2e1364a9326",
+      "title": "Ejemplo Producto",
+      "image": "pla3.png",
+      "detailPath": "/obra/003968e3-e31c-4210-927f-d2e1364a9326"
+    },
+    {
+      "id": "b07ddc8e-b7ba-46c2-abe8-9872d8fdd0f8",
+      "title": "Ejemplo Producto",
+      "image": "pla4.png",
+      "detailPath": "/obra/b07ddc8e-b7ba-46c2-abe8-9872d8fdd0f8"
+    },
+    {
+      "id": "b7a0565f-336f-413d-b50c-26e4e30d7e51",
+      "title": "Hola",
+      "subtitle": "Chao",
+      "image": "1774818827689-1774818637969-imgPrincipal.png",
+      "detailPath": "/obra/b7a0565f-336f-413d-b50c-26e4e30d7e51",
+      "description": "Esto es un ejemplo"
+    }
+  ]
+}
