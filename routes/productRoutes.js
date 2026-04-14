@@ -2,6 +2,7 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const { requireAuth } = require("../middleware/requireAuth");
+const { ensureImagesDir, primaryImagesPath } = require("../lib/imageStorage");
 const {
   getProducts,
   getProductById,
@@ -12,7 +13,7 @@ const {
 
 const router = express.Router();
 
-const imagesPath = path.join(__dirname, "..", "..", "images");
+ensureImagesDir();
 
 router.get("/", (req, res) => {
   res.json(getProducts());
@@ -46,7 +47,7 @@ router.post("/upload", requireAuth, async (req, res) => {
     const base64 = base64Match ? base64Match[2] : data;
 
     const outName = `${Date.now()}-${rawFilename}`;
-    const outPath = path.join(imagesPath, outName);
+    const outPath = path.join(primaryImagesPath, outName);
 
     fs.writeFileSync(outPath, Buffer.from(base64, "base64"));
     res.json({ filename: outName });

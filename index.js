@@ -3,12 +3,14 @@ const path = require("path");
 const express = require("express");
 const cors = require("cors");
 const { ensureAdmin } = require("./lib/store");
+const { ensureImagesDir, getStaticImageDirs } = require("./lib/imageStorage");
 const authRoutes = require("./routes/authRoutes");
 const productRoutes = require("./routes/productRoutes");
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3001;
 const rootDir = path.join(__dirname, "..");
+const imagesPath = "/images";
 
 app.use(
   cors({
@@ -18,8 +20,10 @@ app.use(
 );
 app.use(express.json({ limit: "20mb" }));
 
-const imagesPath = path.join(rootDir, "images");
-app.use("/images", express.static(imagesPath));
+ensureImagesDir();
+getStaticImageDirs().forEach((dir) => {
+  app.use("/images", express.static(dir));
+});
 
 app.use("/api/auth", authRoutes);
 app.use("/api/products", productRoutes);

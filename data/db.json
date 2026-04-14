@@ -3,7 +3,7 @@
     {
       "id": "c57547f0-64cb-490d-ba40-af38f5683ff9",
       "email": "solanagranobles39@gmail.com",
-      "passwordHash": "$2a$10$eUPbWJvvGZ113mlPEEZfLe/J/8QoBVaAO.U/1S4.94cR8MMbNckQC"
+      "passwordHash": "$2a$10$jImCYuma6rS56ScxAP7faO42d8JE1SqIneYDoRnLvlDjdm0TfZlMq"
     }
   ],
   "products": [
@@ -35,7 +35,7 @@
       "id": "b7a0565f-336f-413d-b50c-26e4e30d7e51",
       "title": "Hola",
       "subtitle": "Chao",
-      "image": "1774818827689-1774818637969-imgPrincipal.png",
+      "image": "1774818637969-imgPrincipal.png",
       "detailPath": "/obra/b7a0565f-336f-413d-b50c-26e4e30d7e51",
       "description": "Esto es un ejemplo"
     }
